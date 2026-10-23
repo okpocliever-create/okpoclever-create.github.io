@@ -25,8 +25,8 @@ if (contactForm) {
   contactForm.addEventListener('submit', event => {
     event.preventDefault();
     const data = new FormData(contactForm);
-    // Replace this email with your real team inbox.
-    const email = 'hello@example.com';
+    // Team enquiry inbox.
+    const email = 'okpoclevertom@gmail.com';
     const subject = encodeURIComponent('Book marketing enquiry: ' + (data.get('name') || 'Website visitor'));
     const body = encodeURIComponent(
       'Name: ' + data.get('name') + '\\nEmail: ' + data.get('email') +

@@ -1,183 +1,40 @@
-
-<style>
-  .video-section {
-    margin-bottom: 48px;
-  }
-
-  .video-section-heading {
-    margin-bottom: 24px;
-  }
-
-  .video-portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    max-width: 850px;
-    margin-inline: auto;
-  }
-
-  .video-card {
-    min-width: 0;
-    overflow: hidden;
-    border: 1px solid rgba(120, 120, 120, 0.2);
-    border-radius: 16px;
-    background: var(--card, #fff);
-  }
-
-  /* Vertical 9:16 video frame */
-  .video-frame {
-    width: 100%;
-    aspect-ratio: 9 / 16;
-    overflow: hidden;
-    background: #111827;
-  }
-
-  .video-frame video,
-  .video-frame iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    object-fit: contain;
-  }
-
-  .video-card-info {
-    padding: 18px;
-  }
-
-  .video-card-info h3 {
-    margin: 0 0 8px;
-  }
-
-  .video-card-info p {
-    margin: 0 0 14px;
-  }
-
-  .video-cta {
-    margin-top: 36px;
-    padding: 32px 20px;
-    text-align: center;
-    border-radius: 18px;
-    background: #eef6fb;
-    color: #173c56;
-  }
-
-  .video-cta h2 {
-    margin-top: 0;
-  }
-
-  .video-cta p {
-    max-width: 580px;
-    margin: 0 auto 20px;
-  }
-
-  .video-cta-button {
-    display: inline-block;
-    padding: 13px 24px;
-    border-radius: 9px;
-    background: #247baA;
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .video-cta-button:hover {
-    background: #195d83;
-  }
-
-  @media (max-width: 600px) {
-    .video-portfolio-grid {
-      grid-template-columns: 1fr;
-      max-width: 360px;
-    }
-
-    .video-card-info {
-      padding: 15px;
-    }
-  }
-</style>
-
-<section class="video-section" aria-labelledby="video-heading">
-  <div class="video-section-heading">
-    <span class="eyebrow">Our video portfolio</span>
-    <h2 id="video-heading">Stories brought to life.</h2>
-    <p class="lead">
-      Discover how cinematic visuals and storytelling can
-      introduce a children's book to its next reader.
-    </p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore fictional concept samples for children's book trailers and A+ Content banners by CleverBright StoryWorks.">
+  <title>Our Work | CleverBright StoryWorks</title>
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body>
+<header class="site-header"><div class="wrap nav">
+  <a class="logo" href="index.html" aria-label="CleverBright StoryWorks home"><img class="site-logo-image" src="logo.png" alt="CleverBright StoryWorks"></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html" aria-current="page">Our Work</a><a href="team.html">Our Team</a><a href="contact.html">Contact</a></nav>
+  <a class="nav-cta" href="contact.html">Let's talk</a>
+</div></header>
+<main>
+<section class="page-hero"><div class="wrap"><span class="eyebrow">The creative showcase</span><h1>Imagine what's possible<br><em>for your book.</em></h1><p class="lead">A first look at the kinds of book visuals our team can create. These personal and fictional concepts are here to demonstrate creative direction; they are not commissioned client projects.</p></div></section>
+<section class="section"><div class="wrap">
+  <div class="notice"><strong>Concept work, clearly labelled:</strong> The examples on this page are original personal or fictional concepts. We'll add finished samples here and later replace or expand them with client work we have permission to showcase.</div>
+  <div class="section-head"><div><span class="eyebrow">Cinematic storytelling</span><h2 class="section-title">Let's bring your story to the screen.</h2></div><p>Vertical trailer concepts designed to introduce a book's mood, characters, and central appeal in a concise visual moment.</p></div>
+  <div class="portfolio-grid launch-grid">
+    <article class="work-card launch-card"><div class="video-stage"><div class="video-placeholder"><div class="play">▶</div><strong>Trailer Concept 01</strong><span>9:16 vertical video</span><small>Sample coming soon</small></div></div><div class="work-info"><span class="tag">PERSONAL / FICTIONAL CONCEPT</span><h3>A story in motion</h3><p>A cinematic concept showing how a book's atmosphere can be introduced through moving visuals.</p><a class="button" href="contact.html">Let's make yours</a></div></article>
+    <article class="work-card launch-card"><div class="video-stage"><div class="video-placeholder"><div class="play">▶</div><strong>Trailer Concept 02</strong><span>9:16 vertical video</span><small>Sample coming soon</small></div></div><div class="work-info"><span class="tag">PERSONAL / FICTIONAL CONCEPT</span><h3>Give your story a moment</h3><p>A second creative direction exploring how a book can be introduced in a short, memorable trailer.</p><a class="button" href="contact.html">Your book could be next</a></div></article>
   </div>
-
-  <div class="video-portfolio-grid">
-
-    <!-- VIDEO SLOT 1: Replace these example file paths -->
-    <article class="video-card">
-      <div class="video-frame">
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          poster="images/trailer-one.jpg"
-        >
-          <source
-            src="videos/trailer-one.mp4"
-            type="video/mp4"
-          >
-          Your browser does not support HTML video.
-        </video>
-      </div>
-
-      <div class="video-card-info">
-        <h3>Book Trailer Showcase 01</h3>
-        <p>
-          A portrait-format trailer concept demonstrating
-          how a children's story can come alive on screen.
-        </p>
-        <span class="tag">VIDEO · CONCEPT SAMPLE</span>
-      </div>
-    </article>
-
-    <!-- VIDEO SLOT 2: Replace these example file paths -->
-    <article class="video-card">
-      <div class="video-frame">
-        <video
-          controls
-          playsinline
-          preload="metadata"
-          poster="images/trailer-two.jpg"
-        >
-          <source
-            src="videos/trailer-two.mp4"
-            type="video/mp4"
-          >
-          Your browser does not support HTML video.
-        </video>
-      </div>
-
-      <div class="video-card-info">
-        <h3>Book Trailer Showcase 02</h3>
-        <p>
-          Another example of creative video storytelling
-          designed for a vertical viewing experience.
-        </p>
-        <span class="tag">VIDEO · CONCEPT SAMPLE</span>
-      </div>
-    </article>
-
+</div></section>
+<section class="section white"><div class="wrap">
+  <div class="section-head"><div><span class="eyebrow">A richer book page</span><h2 class="section-title">Let's create a page that does your story justice.</h2></div><p>A+ Content concepts use coordinated visual panels to present a book's world and key features on its product page.</p></div>
+  <div class="portfolio-grid launch-grid">
+    <article class="work-card launch-card"><div class="banner-stage"><div class="banner-placeholder">A+ Banner Concept 01<br>Fictional picture book</div><div class="banner-placeholder">Story world · Key details</div></div><div class="work-info"><span class="tag">PERSONAL / FICTIONAL CONCEPT</span><h3>Storybook A+ concept</h3><p>A gentle, illustration-led direction for a fictional children's story.</p><a class="button" href="contact.html">Let's design yours</a></div></article>
+    <article class="work-card launch-card"><div class="banner-stage"><div class="banner-placeholder">A+ Banner Concept 02<br>Fictional picture book</div><div class="banner-placeholder">Book highlights · Reader appeal</div></div><div class="work-info"><span class="tag">PERSONAL / FICTIONAL CONCEPT</span><h3>A second visual direction</h3><p>A complementary concept showing how a product page can carry a consistent visual identity.</p><a class="button" href="contact.html">Showcase your book</a></div></article>
   </div>
-
-  <!-- CALL TO ACTION -->
-  <div class="video-cta">
-    <h2>Your book could be among them!</h2>
-    <p>
-      Every children's book has something special to share.
-      Let CleverBright StoryWorks help bring yours to life
-      with a creative book trailer designed around its story.
-    </p>
-    <a
-      class="video-cta-button"
-      href="contact.html"
-    >
-      Let's create your book trailer ✨
-    </a>
-  </div>
-</section>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta-band"><div><h2>Every book has something worth sharing.</h2><p>Tell us what you're creating. Together, we'll explore the right way to present your story to the world.</p></div><a class="button" href="contact.html">Tell us about your book</a></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><div class="footer-grid">
+  <div><a class="logo" href="index.html" aria-label="CleverBright StoryWorks home"><img class="site-logo-image" src="logo.png" alt="CleverBright StoryWorks"></a><p style="max-width:380px;margin-top:18px">Creative book marketing for stories worth sharing.</p></div>
+  <div><h3>Explore</h3><div class="footer-links"><a href="services.html">Services</a><a href="portfolio.html">Our work</a></div></div>
+  <div><h3>Get in touch</h3><div class="footer-links"><a href="contact.html">Project enquiries</a><a href="team.html">Meet the team</a><a href="mailto:okpoclevertom@gmail.com">okpoclevertom@gmail.com</a></div></div>
+</div><div class="footer-bottom"><span>© <span data-year></span> CleverBright StoryWorks. All rights reserved.</span><span>Made with care for stories big and small.</span></div></div></footer>
+</body></html>
