@@ -20,19 +20,44 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   const selected = button.dataset.filter;
   workCards.forEach(card => card.hidden = !(selected === 'all' || card.dataset.category === selected));
 }));
-const contactForm = document.querySelector('[data-email-form]');
+// Website contact form: sends enquiries through Web3Forms, without opening an email app.
+const contactForm = document.querySelector('[data-contact-form]');
 if (contactForm) {
-  contactForm.addEventListener('submit', event => {
+  const status = contactForm.querySelector('[data-form-status]');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  contactForm.addEventListener('submit', async event => {
     event.preventDefault();
-    const data = new FormData(contactForm);
-    // Team enquiry inbox.
-    const email = 'okpoclevertom@gmail.com';
-    const subject = encodeURIComponent('Book marketing enquiry: ' + (data.get('name') || 'Website visitor'));
-    const body = encodeURIComponent(
-      'Name: ' + data.get('name') + '\\nEmail: ' + data.get('email') +
-      '\\nAuthor / book: ' + (data.get('book') || 'Not provided') +
-      '\\nService: ' + data.get('service') + '\\n\\nProject details:\\n' + data.get('message')
-    );
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    const keyInput = contactForm.querySelector('input[name="access_key"]');
+    const accessKey = keyInput ? keyInput.value.trim() : '';
+    if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+      if (status) status.textContent = 'The contact form is not connected yet. Please finish the Web3Forms setup before publishing this update.';
+      return;
+    }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending…';
+    }
+    if (status) status.textContent = 'Sending your message…';
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      const result = await response.json();
+      if (response.ok && result.success) {
+        contactForm.reset();
+        if (status) status.textContent = 'Thank you for contacting us. We will get back to you as soon as we can.';
+      } else {
+        if (status) status.textContent = result.message || 'Sorry, your message could not be sent. Please try again shortly.';
+      }
+    } catch (error) {
+      if (status) status.textContent = 'We could not connect to the form service. Please check your internet connection and try again.';
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send your enquiry';
+      }
+    }
   });
 }

@@ -118,3 +118,5 @@ textarea{min-height:130px;resize:vertical}
 .launch-card .work-info{display:flex;flex-direction:column;align-items:flex-start;flex:1}
 .launch-card .work-info .button{margin-top:18px}
 @media(max-width:620px){.portfolio-grid.launch-grid{grid-template-columns:1fr}.video-stage,.banner-stage{min-height:300px}}
+
+.form-status{font-size:.92rem;font-weight:700;margin-top:12px;color:var(--ink);min-height:1.4em}.contact-form button:disabled{opacity:.65;cursor:wait}
