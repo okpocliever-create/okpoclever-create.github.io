@@ -33,3 +33,14 @@ Portfolio note
 
 CONTACT FORM BEHAVIOR
 The public Contact page does not display the inbox email address or link to an email app. Enquiries are sent through Web3Forms using the configured access key. After a successful submission, visitors see: "Thank you for contacting us. We will get back to you as soon as we can." Test a real submission after publishing to confirm delivery.
+
+
+LATEST PORTFOLIO UPDATE
+- Our Work now includes two embedded landscape MP4 video samples with playback controls.
+- Team profiles include photos for Clever OKpo, Bright Ukpong, God’swill Anietie, and Godswill Udoeka.
+- Godswill Udoeka is listed as Video Production Specialist. Video editing has been removed from Bright Ukpong’s listed role, and video book narration has been removed from God’swill Anietie’s listed role.
+- The two video files are included in this package.
+- Upload the contents of this folder to the existing GitHub Pages repository, then test both videos on desktop and mobile.
+
+
+Latest portfolio update (2026-10-24): Our Work now features one A+ Content concept project, The Silent Sovereign F-22 Raptor, using the supplied banner and supporting visuals. The founder photo has also been updated. These are presented as personal concept work, not commissioned client work.
