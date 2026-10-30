@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://okpocliever-create.github.io/okpoclever-create.github.io/sitemap.xml
